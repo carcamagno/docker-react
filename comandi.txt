@@ -1,0 +1,10 @@
+docker run -it -p 3000:3000 -v /app/node_modules -v ${PWD}:/app -e CHOKIDAR_USEPOLLING=true 3fb9c375056d
+
+docker run -it -p 3000:3000 -v /app/node_modules -v C:\CorsiOnLine\udemy\frontend:/app -e CHOKIDAR_USEPOLLING=true 1e3eef5efe7d                  
+
+
+Add stdin_open property to your docker-compose.yml file
+
+  web:
+    stdin_open: true
+Make sure you rebuild your containers after making this change with  docker-compose down && docker-compose up --build          
